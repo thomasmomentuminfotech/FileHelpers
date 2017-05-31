@@ -14,10 +14,10 @@ namespace ExamplesFx
         //-> If you have a source file like this, separated by a |:
       
         //-> FileIn:Input.txt
-/*10248|VINET|04071996|32.38
-10249|TOMSP|05071996|11.61
-10250|HANAS|08071996|65.83
-10251|VICTE|08071996|41.34*/
+/*10248|VINET|04071996|32|38
+10249|TOMSP|05071996|11|61
+10250|HANAS|08071996|65|83
+10251|VICTE|08071996|41|34*/
         //-> /FileIn
 
 
@@ -34,7 +34,7 @@ namespace ExamplesFx
             [FieldConverter(ConverterKind.Date, "ddMMyyyy")]
             public DateTime OrderDate;
 
-            [FieldConverter(ConverterKind.Decimal, ".")] // The decimal separator is .
+            [FieldConverter(ConverterKind.Decimal, "|")] // The decimal separator is .
             public decimal Freight;
         }
 
